@@ -4,9 +4,15 @@ subtitle: "An Innovative Assessment for a GenAI-Driven World"
 author: "Dr. Michael Borck"
 institute: "Faculty of Business & Law, School of Management & Marketing"
 date: "27 November 2025"
-format: 
+format:
+  html:
+    embed-resources: true
+  pdf:
+    colorlinks: true
   pptx:
-    slide-level: 2
+    slide-level: 1
+    incremental: false
+    footer: "An Innovative Assessment for a GenAI-Driven World | Michael Borck"
 ---
 
 # Welcome
@@ -65,7 +71,7 @@ This requires a move towards 'Lane 2' or open assessments, where we design tasks
 
 # The Assessment: The 'CloudCore' Audit
 
-![](./images/cloudcore.gif)
+![](./images/cloudcore.png)
 
 ::: {.notes}
 
