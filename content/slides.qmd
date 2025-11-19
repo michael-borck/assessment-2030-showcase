@@ -1,0 +1,70 @@
+---
+title: "Teaching with AI: From Passive Users to Critical Partners"
+subtitle: "An Innovative Assessment for a GenAI-Driven World"
+author: "Dr. Michael Borck"
+institute: "Faculty of Business & Law, School of Management & Marketing"
+date: "27 November 2025"
+format: 
+  pptx:
+    slide-level: 2
+---
+
+# Welcome
+
+![](./images/copilot-2-sigma.png)
+
+# The Context: An Industry in Motion
+
+![](./images/amplify.png)
+
+# The Challenge: Assessing *with* AI
+
+![](./images/challenge.png)
+
+
+# The Assessment: The 'CloudCore' Audit
+
+![](cloudcore.png)
+
+
+# Innovation 1: AI as the "Client"
+
+![](./images/client.png)
+
+
+# Innovation 2: AI as the "Intern"
+
+![](./images/intern.png)
+
+
+# The Student as "Author" 
+
+![](./images/author.png)
+
+
+# Pedagogy: "Thinking *with* AI"
+
+![](./images/student.png)
+
+
+# Design & Authenticity 
+
+![](./images/logistics.png)
+
+
+# Academic Integrity as Transparency
+
+![](./images/integerity.png)
+
+
+# Key Takeaways 
+
+![](./images/journey.png)
+
+# Thank You
+
+![](images/.question.png)
+
+**Dr. Michael Borck**
+michael.borck@curtin.edu.au
+

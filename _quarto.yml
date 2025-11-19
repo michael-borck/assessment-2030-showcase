@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Teaching with AI: From Passive Users to Critical Partners"
+  description: "Assessment 2030 Showcase Presentation by Dr. Michael Borck"
+  site-url: "https://michaelborck.github.io/assessment-2030"
+  
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-copy: true
+    code-line-numbers: true
+    
+metadata:
+  author: "Dr. Michael Borck"
+  institute: "Faculty of Business & Law, School of Management & Marketing"
+  date: "27 November 2025"
