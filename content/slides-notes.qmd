@@ -11,7 +11,7 @@ format:
 
 # Welcome
 
-![](./images/copilot-2-sigma.png)
+![](./images/copilot-2-sigma_nobg.png)
 
 ::: {.notes}
 
@@ -22,7 +22,7 @@ Today, I want to share an innovative assessment I've been developing that tries 
 
 # The Context: An Industry in Motion
 
-![](./images/amplify.png)
+![](./images/amplify_nobg.png)
 
 ::: {.notes}
 
@@ -41,7 +41,7 @@ This presents a clear challenge for us as educators. If this is the new reality 
 
 # The Challenge: Assessing *with* AI
 
-![](./images/challenge.png)
+![](./images/challenge_nobg.png)
 
 ::: {.notes}
 
@@ -65,7 +65,7 @@ This requires a move towards 'Lane 2' or open assessments, where we design tasks
 
 # The Assessment: The 'CloudCore' Audit
 
-![](cloudcore.png)
+![](./images/cloudcore.gif)
 
 ::: {.notes}
 
@@ -88,7 +88,7 @@ Second, they are encouraged to work *with* an LLM of their choice as their perso
 
 # Innovation 1: AI as the "Client"
 
-![](./images/client.png)
+![](./images/client_nobg.png)
 
 ::: {.notes}
 
@@ -114,7 +114,7 @@ This immediately teaches a critical skill: how to gather intelligence. Students 
 
 # Innovation 2: AI as the "Intern"
 
-![](./images/intern.png)
+![](./images/intern_nobg.png)
 
 ::: {.notes}
 
@@ -139,7 +139,7 @@ This reframes the student's role immediately."
 
 # The Student as "Author" 
 
-![](./images/author.png)
+![](./images/author_nobg.png)
 
 ::: {.notes}
 
@@ -160,7 +160,7 @@ This model *requires* them to use their knowledge from the course to critically 
 
 # Pedagogy: "Thinking *with* AI"
 
-![](./images/student.png)
+![](./images/student_nobg.png)
 
 ::: {.notes}
 
@@ -186,7 +186,7 @@ Many also do what a real professional would: they use multiple LLMs to cross-ref
 
 # Design & Authenticity 
 
-![](./images/logistics.png)
+![](./images/logistics_nobg.png)
 
 ::: {.notes}
 
@@ -208,7 +208,7 @@ And to make it even more realistic, an AI 'employee' might occasionally 'cancel'
 
 # Academic Integrity as Transparency
 
-![](./images/integerity.png)
+![](./images/integrity_nobg.png)
 
 ::: {.notes}
 
@@ -232,7 +232,7 @@ But the transcripts also show me the students who are *really thinking*. I can s
 
 # Key Takeaways 
 
-![](./images/journey.png)
+![](./images/journey_nobg.png)
 
 ::: {.notes}
 
@@ -255,7 +255,7 @@ Ultimately, our goal must be to prepare our students for the modern workplace. T
 
 # Thank You
 
-![](images/.question.png)
+![](./images/question_nobg.png)
 
 **Dr. Michael Borck**
 michael.borck@curtin.edu.au
