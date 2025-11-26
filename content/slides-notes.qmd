@@ -19,9 +19,33 @@ format:
 
 ::: {.notes}
 
-"Good afternoon, everyone. My name is Dr. Michael Borck, and I'm a lecturer in Business Information Systems.
+[Pause, make eye contact]
 
-Today, I want to share an innovative assessment I've been developing that tries to answer a question many of us are grappling with: How do we authentically assess our students in a world that is being fundamentally reshaped by Generative AI?"
+"Picture this: You walk into a sleek conference room at CloudCore, an AI startup. The CFO, suited up and checking their watch, glances at you impatiently. You have 15 minutes to understand their risk appetite for data breaches.
+
+[Pause]
+
+You ask: 'So... what are your main security concerns?'
+
+[Pause - slight grimace]
+
+The CFO gives you business-speak: 'Well, security is very important to us. We take it seriously.'
+
+Useless.
+
+[Pause]
+
+Now imagine you ask THIS instead: 'If we discovered a data breach tomorrow affecting customer payment data, what's your maximum acceptable cost for remediation before the board gets involved?'
+
+[Pause]
+
+Suddenly, you get real numbers. Real constraints. Real insight.
+
+[Pause, then gesture]
+
+That skill - asking the RIGHT question to get actionable intelligence - is now the most critical skill our students need. Because in a world where AI can generate perfect-looking answers, the quality of your question determines everything.
+
+My name is Dr. Michael Borck, and today I want to share an assessment that teaches exactly that skill by putting students in that conference room... with an AI playing the CFO."
 :::
 
 # The Context: An Industry in Motion
@@ -95,10 +119,6 @@ Second, they are encouraged to work *with* an LLM of their choice as their perso
 ![](./images/client_nobg.png)
 
 ::: {.notes}
-
-("...students don't just get static documents. They interact with AI chatbots... For example, the CFO chatbot..."), you can have the GIF silently looping on the slide. It's the ideal "show, don't just tell" moment.
-
-
 
 "Let's look at that first prong. When a consultant starts a real audit, they don't get a neat package of all the information. They have to interview people.
 
@@ -267,5 +287,19 @@ michael.borck@curtin.edu.au
 
 ::: {.notes}
 
-"Thank you for your time. I'd be happy to answer any questions you have about the design, the implementation, or the student feedback so far."
+"Thank you for your time.
+
+[Gesture to QR code]
+
+Before we open for questions, I want to point you to this QR code. It links to a companion website I've created for this presentation. There you'll find the full slide deck, curated resources on AI in education, and two interactive tools:
+
+First, a Teaching Style Quiz that helps you identify your pedagogical approach and gives you AI integration ideas tailored to how you teach.
+
+Second, an AI Literacy Diagnostic that assesses your current comfort level with these tools and recommends resources matched to where you are.
+
+You'll also find a link to the CloudCore simulator itself, so you can experience the AI-as-client approach firsthand.
+
+[Pause]
+
+Now, I'd be happy to answer any questions you have about the assessment design, the implementation, or the student feedback so far."
 :::
