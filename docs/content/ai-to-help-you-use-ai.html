@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ai-to-help-you-use-ai – Teaching with AI: From Passive Users to Critical Partners</title>
+<title>ai-to-help-you-use-ai – Assessment 2030: Teaching with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,59 @@ ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
+
+/* Consistent Navigation Bar */
+.site-nav {
+    background: #1e3a5f;
+    border-bottom: 3px solid #2c5aa0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav-brand {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.nav-links a {
+    color: rgba(255,255,255,0.95);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+.nav-links a:hover {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        gap: 12px;
+        justify-content: center;
+    }
+}
+
 </style>
 
 
@@ -3875,49 +3928,22 @@ color: #1e3a5f;
 </head>
 
 <body class="nav-fixed quarto-light">
+<nav class="site-nav">
+    <div class="nav-container">
+        <a href="../index.html" class="nav-brand">Assessment 2030: Teaching with AI</a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../teaching-style-quiz.html">Teaching Style</a>
+            <a href="../ai-literacy-diagnostic.html">AI Literacy</a>
+            <a href="../resources-hub.html">Resources</a>
+            <a href="../videos.html">Videos</a>
+        </div>
+    </div>
+</nav>
+
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Teaching with AI: From Passive Users to Critical Partners</span>
-    </a>
-  </div>
-            <div id="quarto-search" class title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../assessment-2030/index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../assessment-2030/teaching-style-quiz.html"> 
-<span class="menu-text">Teaching Style</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../assessment-2030/ai-literacy-diagnostic.html"> 
-<span class="menu-text">AI Literacy</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../assessment-2030/resources-hub.html"> 
-<span class="menu-text">Resources</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../assessment-2030/videos.html"> 
-<span class="menu-text">Videos</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
+  
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->

@@ -7,20 +7,20 @@ project:
     - restore-index.sh
 
 website:
-  title: "Teaching with AI: From Passive Users to Critical Partners"
+  title: "Assessment 2030: Teaching with AI"
   site-url: "https://michaelborck-presentations.github.io/assessment-2030/"
   navbar:
     left:
       - text: Home
-        href: /assessment-2030/index.html
+        href: ../index.html
       - text: Teaching Style
-        href: /assessment-2030/teaching-style-quiz.html
+        href: ../teaching-style-quiz.html
       - text: AI Literacy
-        href: /assessment-2030/ai-literacy-diagnostic.html
+        href: ../ai-literacy-diagnostic.html
       - text: Resources
-        href: /assessment-2030/resources-hub.html
+        href: ../resources-hub.html
       - text: Videos
-        href: /assessment-2030/videos.html
+        href: ../videos.html
 
 format:
   html:

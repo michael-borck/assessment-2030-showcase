@@ -1,7 +1,10 @@
 #!/bin/bash
-# Post-render script to restore custom index.html
+# Post-render script to restore custom index.html and standardize navbars
 
-echo "Restoring custom index.html..."
+echo "🔧 Post-render processing..."
+
+# Step 1: Restore custom index.html
+echo "  → Restoring custom index.html..."
 
 cat > /Users/michael/Projects/assessment-2030/docs/index.html << 'HTMLEOF'
 <!DOCTYPE html>
@@ -182,4 +185,128 @@ cat > /Users/michael/Projects/assessment-2030/docs/index.html << 'HTMLEOF'
 </html>
 HTMLEOF
 
-echo "✓ index.html restored"
+echo "  ✓ index.html restored"
+
+# Step 2: Standardize Quarto-rendered page navbars
+echo "  → Standardizing Quarto page navbars..."
+
+python3 << 'PYEOF'
+import os
+import re
+from pathlib import Path
+
+# Define the consistent navbar HTML to inject
+NAVBAR_HTML = '''<nav class="site-nav">
+    <div class="nav-container">
+        <a href="../index.html" class="nav-brand">Assessment 2030: Teaching with AI</a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../teaching-style-quiz.html">Teaching Style</a>
+            <a href="../ai-literacy-diagnostic.html">AI Literacy</a>
+            <a href="../resources-hub.html">Resources</a>
+            <a href="../videos.html">Videos</a>
+        </div>
+    </div>
+</nav>'''
+
+# Define CSS for the navbar
+NAVBAR_CSS = '''
+/* Consistent Navigation Bar */
+.site-nav {
+    background: #1e3a5f;
+    border-bottom: 3px solid #2c5aa0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav-brand {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.nav-links a {
+    color: rgba(255,255,255,0.95);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+.nav-links a:hover {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        gap: 12px;
+        justify-content: center;
+    }
+}
+'''
+
+docs_content = Path('/Users/michael/Projects/assessment-2030/docs/content')
+
+if docs_content.exists():
+    html_files = list(docs_content.glob('*.html'))
+
+    for html_file in html_files:
+        with open(html_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # Remove Quarto's header navbar (everything from <header id="quarto-header"> to </header>)
+        content = re.sub(
+            r'<header id="quarto-header"[^>]*>.*?</header>',
+            '',
+            content,
+            flags=re.DOTALL
+        )
+
+        # Inject our navbar CSS into the head section (before </style> if exists, or before </head>)
+        if '</style>' in content:
+            # Add to existing style block
+            content = content.replace('</style>', NAVBAR_CSS + '\n</style>', 1)
+        elif '</head>' in content:
+            # Create new style block
+            style_block = f'<style>\n{NAVBAR_CSS}\n</style>\n</head>'
+            content = content.replace('</head>', style_block, 1)
+
+        # Inject our navbar after <body> tag
+        content = re.sub(
+            r'(<body[^>]*>)',
+            r'\1\n' + NAVBAR_HTML + '\n',
+            content,
+            count=1
+        )
+
+        with open(html_file, 'w', encoding='utf-8') as f:
+            f.write(content)
+
+        print(f"    ✓ {html_file.name}")
+
+    print(f"  ✓ Processed {len(html_files)} Quarto pages")
+else:
+    print("  ⚠ docs/content directory not found")
+
+PYEOF
+
+echo "✅ Post-render processing complete!"
