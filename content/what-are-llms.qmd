@@ -32,7 +32,7 @@ But from that simple task—predicting the next word—these models learned to:
 **Examples you've probably heard of:**
 
 - ChatGPT (OpenAI)
-- Claude (Anthropic) - what you might use in this masterclass
+- Claude (Anthropic)
 - Gemini (Google)
 - Copilot (Microsoft)
 
@@ -786,21 +786,3 @@ Ask yourself:
 
 5. **They're tools, not magic** - LLMs are powerful but limited. Success comes from using them well, not just using them.
 
----
-
-## Recommended Next Steps
-
-**Before the masterclass:**
-
-1. Try an LLM yourself (ChatGPT, Claude, or Gemini)
-2. Ask it to explain something, write something, summarize something
-3. Notice where it's helpful and where it's not
-4. Think about one task at your work that might benefit
-
-**During the masterclass:**
-
-- You'll apply these concepts to a real AI customer service project
-- You'll make decisions about when to scale, pivot, or kill AI projects
-- You'll practice managing the human side of AI projects
-
-**See you there!**

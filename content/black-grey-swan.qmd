@@ -50,8 +50,3 @@ In AI, these are "known unknowns." We know the risk exists, and we might even ha
 | **Preparation** | Impossible to prepare for specifically; requires general resilience. | Possible to mitigate, but often ignored due to cost/effort. |
 | **Analogy** | Aliens landing and giving us super-code. | A massive solar flare wiping out data centers. |
 
-### Relevance to You (AI Facilitator)
-
-As a lecturer and facilitator, you are likely helping students and colleagues think about **Grey Swans** (ethical frameworks, bias mitigation, legal compliance, institutional policies). However, the philosophical allure of AI often focuses on **Black Swans** (singularity, AGI, existential risk).
-
-Distinguishing these helps people understand where to focus day‑to‑day design and governance efforts (mitigating Grey Swans) versus where they need more flexible, long‑term thinking (adapting to Black Swans). You can pair this note with the handout **Ethics, Data Governance & Integrity** when framing AI risk and Assessment 2030.

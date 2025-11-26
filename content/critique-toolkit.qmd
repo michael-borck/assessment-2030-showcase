@@ -7,9 +7,7 @@ format:
 
 # The AI Critique Toolkit – Becoming a Smart Business Professional
 
-This toolkit is a companion to the **AI in Pedagogical Design and Delivery** workshop. It extends **Activity 3 – 5‑Step Critique Framework** with business‑focused questions and a few practical templates you can reuse in units, workplace activities, or assessments.
-
-You can read this on its own, or alongside **Activity 3 – 5‑Step Critique Framework**.
+This toolkit provides business-focused critique questions and practical templates you can reuse in professional settings, educational contexts, or organizational assessments.
 
 ---
 
@@ -32,7 +30,7 @@ Your professional edge is not “using AI” but **reviewing, questioning, and i
 
 ## 2. Your 5‑Step Business Critique Framework
 
-This toolkit aligns with the workshop’s 5‑step model (Purpose, Plausibility, Evidence, Stakes, Action). Here is a more business‑specific lens you can use with any AI‑generated recommendation, policy, plan, or analysis.
+This toolkit provides a 5‑step model (Purpose, Plausibility, Evidence, Stakes, Action) with a business‑specific lens you can use with any AI‑generated recommendation, policy, plan, or analysis.
 
 1. **Comprehension Check – Do I actually understand this?**  
    - Red flags: vague jargon, unclear rationale, no clear problem statement.  
@@ -69,11 +67,11 @@ This toolkit aligns with the workshop’s 5‑step model (Purpose, Plausibility,
      - “What resistance should we expect from different groups, and why?”  
      - “What communication and support would be needed for this to succeed?”
 
-You can map these directly to the workshop model:
+You can map these steps to the overall 5-step model:
 
-- Comprehension → **Purpose**  
-- Simplicity, Context → **Plausibility**  
-- Legal/Technical/Risk, Context → **Evidence & Stakes**  
+- Comprehension → **Purpose**
+- Simplicity, Context → **Plausibility**
+- Legal/Technical/Risk, Context → **Evidence & Stakes**
 - Stakeholder → **Stakes & Action**
 
 ---
@@ -160,10 +158,10 @@ Use this as a quick sense‑check after you’ve applied the 5‑step framework.
 
 Try this once with a real or realistic problem:
 
-1. **Choose a business or educational challenge** (e.g. staff onboarding, student engagement, assessment redesign, marketing for a new program).  
-2. **Ask an AI tool for a recommendation or plan.**  
-3. **Apply the 5‑step business critique framework** and note at least one red flag for each step.  
-4. **Ask follow‑up questions** (using the conversation templates) until you have a version you might realistically consider.  
+1. **Choose a business or educational challenge** (e.g. staff onboarding, student engagement, assessment redesign, marketing for a new program).
+2. **Ask an AI tool for a recommendation or plan.**
+3. **Apply the 5‑step business critique framework** and note at least one red flag for each step.
+4. **Ask follow‑up questions** (using the conversation templates) until you have a version you might realistically consider.
 5. **Document the interaction** using the short template above.
 
-This mirrors what we practise in **Activity 3 – 5‑Step Critique Framework**, but with more business detail and a focus on professional judgement you can carry into your career.
+This exercise builds professional judgement about AI recommendations—a critical skill you can apply throughout your career.
