@@ -142,6 +142,64 @@
     </style>
 </head>
 <body>
+<style>
+.site-navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.site-navbar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+.site-navbar .logo {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.site-navbar-links {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .site-navbar-links {
+    gap: 10px;
+    font-size: 0.9em;
+  }
+}
+</style>
+
+<div class="site-navbar">
+  <div class="site-navbar-content">
+    <a href="index.html" class="logo">Teaching with AI</a>
+    <div class="site-navbar-links">
+      <a href="index.html">Home</a>
+      <a href="teaching-style-quiz.html">Teaching Style</a>
+      <a href="ai-literacy-diagnostic.html">AI Literacy</a>
+      <a href="resources-hub.html">Resources</a>
+      <a href="videos.html">Videos</a>
+    </div>
+  </div>
+</div>
+
+
 <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
       <div class="container-fluid">
