@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Philosophy Detector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- React & Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Lexend', 'sans-serif'],
+            },
+            colors: {
+              'primary': {
+                '50': '#eff6ff',
+                '100': '#dbeafe',
+                '200': '#bfdbfe',
+                '300': '#93c5fd',
+                '400': '#60a5fa',
+                '500': '#3b82f6',
+                '600': '#2563eb',
+                '700': '#1d4ed8',
+                '800': '#1e40af',
+                '900': '#1e3a8a',
+                '950': '#172554',
+              },
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col items-center justify-center p-4">
+<style>
+.site-navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.site-navbar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+.site-navbar .logo {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.site-navbar-links {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .site-navbar-links {
+    gap: 10px;
+    font-size: 0.9em;
+  }
+}
+</style>
+
+<div class="site-navbar">
+  <div class="site-navbar-content">
+    <a href="index.html" class="logo">Teaching with AI</a>
+    <div class="site-navbar-links">
+      <a href="index.html">Home</a>
+      <a href="teaching-style-quiz.html">Teaching Style</a>
+      <a href="ai-literacy-diagnostic.html">AI Literacy</a>
+      <a href="resources-hub.html">Resources</a>
+      <a href="videos.html">Videos</a>
+    </div>
+  </div>
+</div>
+
+
+<header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Teaching with AI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="teaching-style-quiz.html">Teaching Style</a></li>
+            <li class="nav-item"><a class="nav-link" href="ai-literacy-diagnostic.html">AI Literacy</a></li>
+            <li class="nav-item"><a class="nav-link" href="resources-hub.html">Resources</a></li>
+            <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+<style>
+  body { padding-top: 60px; }
+</style>
+
+
+    <div id="root" class="w-full max-w-3xl"></div>
+
+    <script type="text/babel">
+        // --- DATA & CONSTANTS ---
+        const TEACHING_PHILOSOPHIES = [
+            'Traditional',
+            'Constructivist',
+            'Project-Based Learning',
+            'Inquiry-Based Learning',
+            'Socratic Method',
+            'Montessori',
+            'Experiential Learning',
+            'Collaborative Learning',
+            'Differentiated Instruction',
+        ];
+
+        const PHILOSOPHY_DESCRIPTIONS = {
+            'Traditional': "Focuses on direct instruction, explicit teaching, and structured content delivery. Teacher-centered.",
+            'Constructivist': "Learners actively construct their own knowledge. Teacher as a facilitator. Emphasizes discovery and context.",
+            'Project-Based Learning': "Learning through engaging with complex, real-world problems over an extended period. Student-driven.",
+            'Inquiry-Based Learning': "Starts with a question or problem. Students lead their own investigation to find answers.",
+            'Socratic Method': "Based on disciplined dialogue. Teacher uses probing questions to challenge assumptions and uncover complex ideas.",
+            'Montessori': "Student-centered approach with an emphasis on self-directed activity, hands-on learning, and collaborative play.",
+            'Experiential Learning': "Learning through doing and reflection. Involves hands-on experiences and activities.",
+            'Collaborative Learning': "Students work in groups to solve problems, complete tasks, or create products. Emphasizes social interaction.",
+            'Differentiated Instruction': "Tailoring instruction to meet individual student needs. Flexible grouping and varied assignments.",
+        };
+
+        const QUIZ_QUESTIONS = [
+            {
+                question: "When planning a lesson, I primarily focus on:",
+                options: [
+                    "A clear, structured delivery of facts and concepts.", // Traditional
+                    "Creating an environment for students to discover concepts on their own.", // Constructivist
+                    "A long-term, real-world problem students will solve.", // Project-Based
+                    "Posing a central question that will drive student investigation." // Inquiry-Based
+                ],
+                mapping: ['Traditional', 'Constructivist', 'Project-Based Learning', 'Inquiry-Based Learning']
+            },
+            {
+                question: "The role of the teacher in my classroom is best described as:",
+                options: [
+                    "An expert who imparts knowledge.", // Traditional
+                    "A facilitator who guides student-led learning.", // Constructivist
+                    "A coach who supports student teams on a major task.", // Project-Based
+                    "A questioner who challenges student thinking." // Socratic
+                ],
+                mapping: ['Traditional', 'Constructivist', 'Project-Based Learning', 'Socratic Method']
+            },
+            {
+                question: "Student success is best measured by:",
+                options: [
+                    "Their ability to recall and apply specific information on tests.", // Traditional
+                    "Their ability to explain a concept in their own words and apply it to new situations.", // Constructivist
+                    "The quality and real-world applicability of their final product or presentation.", // Project-Based
+                    "The depth and thoughtfulness of the questions they ask." // Socratic / Inquiry
+                ],
+                mapping: ['Traditional', 'Constructivist', 'Project-Based Learning', 'Inquiry-Based Learning']
+            },
+            {
+                question: "Classroom activities should be primarily:",
+                options: [
+                    "Structured, with clear instructions and predictable outcomes.", // Traditional
+                    "Flexible, allowing for student choice and varied approaches.", // Differentiated
+                    "Centered around group collaboration on a complex task.", // Collaborative
+                    "Driven by student-led discussion and debate." // Socratic
+                ],
+                mapping: ['Traditional', 'Differentiated Instruction', 'Collaborative Learning', 'Socratic Method']
+            },
+            {
+                question: "When a student is struggling, I am most likely to:",
+                options: [
+                    "Re-teach the material in a more direct way.", // Traditional
+                    "Provide different resources and ask guiding questions to help them find the answer themselves.", // Inquiry
+                    "Encourage them to collaborate with peers to find a solution.", // Collaborative
+                    "Adjust the task or provide alternative ways to demonstrate their understanding." // Differentiated
+                ],
+                mapping: ['Traditional', 'Inquiry-Based Learning', 'Collaborative Learning', 'Differentiated Instruction']
+            }
+        ];
+
+        // --- ICONS (Explicit Components) ---
+        const IconLightbulb = ({ className }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                <path d="M15.05 14.81A6.5 6.5 0 0 1 8.95 8.95"></path>
+                <path d="M12 2a10 10 0 1 0 10 10c0-4.42-3.58-8-8-8Z"></path>
+                <path d="M12 2v4"></path><path d="M12 18v4"></path>
+                <path d="m4.93 4.93 2.83 2.83"></path>
+                <path d="m16.24 16.24 2.83 2.83"></path>
+                <path d="M2 12h4"></path>
+                <path d="M18 12h4"></path>
+                <path d="m4.93 19.07 2.83-2.83"></path>
+                <path d="m16.24 7.76 2.83-2.83"></path>
+            </svg>
+        );
+
+        const IconBookOpen = ({ className }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+        );
+
+        const IconCheckCircle = ({ className }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+            </svg>
+        );
+
+        const IconRefresh = ({ className }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                <path d="M21 3v5h-5"></path>
+                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                <path d="M8 16H3v5"></path>
+            </svg>
+        );
+
+        // --- COMPONENTS ---
+        const Card = ({ children, className = '' }) => (
+            <div className={`bg-white border border-gray-200 rounded-lg shadow-sm p-6 ${className}`}>
+                {children}
+            </div>
+        );
+
+        const Button = ({ children, onClick, variant = 'primary', className = '' }) => {
+            const base = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 px-4 py-2 text-sm";
+            const variants = {
+                primary: 'bg-primary-600 text-white hover:bg-primary-700',
+                secondary: 'bg-gray-100 text-gray-700 hover:bg-gray-200',
+                ghost: 'hover:bg-gray-100 text-gray-700'
+            };
+            return (
+                <button onClick={onClick} className={`${base} ${variants[variant]} ${className}`}>
+                    {children}
+                </button>
+            );
+        };
+
+        // --- MAIN APP ---
+        const App = () => {
+            const [mode, setMode] = React.useState('INITIAL'); // INITIAL, QUIZ, MANUAL, RESULT
+            const [currentStep, setCurrentStep] = React.useState(0);
+            const [selections, setSelections] = React.useState([]); // Array of selected option indices
+            const [result, setResult] = React.useState(null);
+
+            const handleStartQuiz = () => {
+                setMode('QUIZ');
+                setCurrentStep(0);
+                setSelections([]);
+            };
+
+            const handleAnswer = (optionIndex) => {
+                const newSelections = [...selections, optionIndex];
+                setSelections(newSelections);
+
+                if (currentStep < QUIZ_QUESTIONS.length - 1) {
+                    setCurrentStep(currentStep + 1);
+                } else {
+                    calculateResult(newSelections);
+                }
+            };
+
+            const calculateResult = (finalSelections) => {
+                const scores = {};
+                
+                finalSelections.forEach((optionIndex, questionIndex) => {
+                    const mappedPhilosophy = QUIZ_QUESTIONS[questionIndex].mapping[optionIndex];
+                    scores[mappedPhilosophy] = (scores[mappedPhilosophy] || 0) + 1;
+                });
+
+                // Find highest score
+                let maxScore = 0;
+                let winner = 'Traditional'; // Default fallback
+
+                Object.entries(scores).forEach(([philosophy, score]) => {
+                    if (score > maxScore) {
+                        maxScore = score;
+                        winner = philosophy;
+                    }
+                });
+
+                setResult(winner);
+                setMode('RESULT');
+            };
+
+            const handleManualSelect = (philosophy) => {
+                setResult(philosophy);
+                setMode('RESULT');
+            };
+
+            const reset = () => {
+                setMode('INITIAL');
+                setResult(null);
+                setSelections([]);
+                setCurrentStep(0);
+            };
+
+            // --- VIEW: INITIAL ---
+            if (mode === 'INITIAL') {
+                return (
+                    <Card className="text-center py-10 px-8">
+                        <div className="mb-6 flex justify-center">
+                            <div className="p-4 bg-primary-100 rounded-full animate-bounce">
+                                <IconLightbulb className="w-10 h-10 text-primary-600" />
+                            </div>
+                        </div>
+                        <h1 className="text-3xl font-bold font-heading text-gray-900 mb-3">Teaching Style Detector</h1>
+                        <p className="text-gray-600 mb-10 max-w-lg mx-auto leading-relaxed">
+                            Discover your pedagogical DNA. This tool uses a heuristic algorithm to match your preferences with established educational frameworks.
+                        </p>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <button 
+                                onClick={handleStartQuiz}
+                                className="p-6 border-2 border-primary-100 rounded-xl hover:border-primary-500 hover:bg-primary-50 transition-all group text-left"
+                            >
+                                <h3 className="font-bold text-lg text-primary-700 mb-2 group-hover:text-primary-800">Take the Quiz</h3>
+                                <p className="text-sm text-gray-500">Answer 5 questions to generate a profile.</p>
+                            </button>
+
+                            <button 
+                                onClick={() => setMode('MANUAL')}
+                                className="p-6 border-2 border-gray-100 rounded-xl hover:border-gray-400 hover:bg-gray-50 transition-all group text-left"
+                            >
+                                <h3 className="font-bold text-lg text-gray-700 mb-2 group-hover:text-gray-900">Browse Styles</h3>
+                                <p className="text-sm text-gray-500">View definitions and select one manually.</p>
+                            </button>
+                        </div>
+                    </Card>
+                );
+            }
+
+            // --- VIEW: MANUAL ---
+            if (mode === 'MANUAL') {
+                return (
+                    <Card>
+                        <div className="flex justify-between items-center mb-6 border-b border-gray-100 pb-4">
+                            <h2 className="text-xl font-bold font-heading">Select Your Philosophy</h2>
+                            <Button variant="ghost" onClick={() => setMode('INITIAL')}>Back</Button>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-2">
+                            {TEACHING_PHILOSOPHIES.map((philosophy) => (
+                                <button
+                                    key={philosophy}
+                                    onClick={() => handleManualSelect(philosophy)}
+                                    className="text-left p-4 border border-gray-200 rounded-lg hover:ring-2 hover:ring-primary-500 hover:border-transparent transition-all"
+                                >
+                                    <div className="flex items-center justify-between mb-2">
+                                        <span className="font-bold text-gray-800">{philosophy}</span>
+                                        <IconBookOpen className="w-4 h-4 text-gray-400" />
+                                    </div>
+                                    <p className="text-xs text-gray-500 leading-relaxed">
+                                        {PHILOSOPHY_DESCRIPTIONS[philosophy]}
+                                    </p>
+                                </button>
+                            ))}
+                        </div>
+                    </Card>
+                );
+            }
+
+            // --- VIEW: QUIZ ---
+            if (mode === 'QUIZ') {
+                const question = QUIZ_QUESTIONS[currentStep];
+                const progress = ((currentStep) / QUIZ_QUESTIONS.length) * 100;
+
+                return (
+                    <Card>
+                        <div className="mb-8">
+                            <div className="flex justify-between items-center mb-4">
+                                <p className="text-xs font-bold uppercase tracking-wider text-primary-600">
+                                    Question {currentStep + 1}/{QUIZ_QUESTIONS.length}
+                                </p>
+                                <Button variant="ghost" onClick={() => setMode('INITIAL')}>Cancel</Button>
+                            </div>
+                            
+                            <h2 className="text-2xl font-bold tracking-tight text-gray-900 font-heading leading-snug min-h-[4rem]">
+                                {question.question}
+                            </h2>
+                            
+                            <div className="w-full bg-gray-100 rounded-full h-1.5 mt-6">
+                                <div 
+                                    className="bg-primary-600 h-1.5 rounded-full transition-all duration-500" 
+                                    style={{ width: `${progress}%` }}
+                                ></div>
+                            </div>
+                        </div>
+                        
+                        <div className="space-y-3">
+                            {question.options.map((option, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => handleAnswer(index)}
+                                    className="group w-full text-left p-4 border border-gray-200 rounded-xl hover:bg-primary-50 hover:border-primary-300 transition-all duration-200 flex items-start"
+                                >
+                                    <div className="flex-shrink-0 mt-0.5 w-6 h-6 rounded-full border-2 border-gray-200 group-hover:border-primary-500 mr-4 flex items-center justify-center text-xs font-bold text-gray-400 group-hover:text-primary-600">
+                                        {['A','B','C','D'][index]}
+                                    </div>
+                                    <p className="font-medium text-gray-700 group-hover:text-gray-900">{option}</p>
+                                </button>
+                            ))}
+                        </div>
+                    </Card>
+                );
+            }
+
+            // --- VIEW: RESULT ---
+            if (mode === 'RESULT') {
+                // Store result in localStorage for other pages to access
+                React.useEffect(() => {
+                    localStorage.setItem('teachingStyle', result);
+                }, [result]);
+
+                return (
+                    <Card className="text-center py-10 relative overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-purple-500"></div>
+
+                        <div className="mb-6 flex justify-center">
+                            <div className="p-4 bg-green-100 rounded-full">
+                                <IconCheckCircle className="w-12 h-12 text-green-600" />
+                            </div>
+                        </div>
+
+                        <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wide mb-2">Your Teaching Philosophy</h2>
+                        <h1 className="text-4xl font-bold font-heading text-primary-700 mb-6">{result}</h1>
+
+                        <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 mb-8 max-w-lg mx-auto">
+                            <p className="text-gray-700 leading-relaxed text-lg">
+                                {PHILOSOPHY_DESCRIPTIONS[result]}
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col justify-center gap-3 max-w-md mx-auto">
+                            <Button
+                                onClick={() => window.location.href = 'teaching-style-results.html?style=' + encodeURIComponent(result)}
+                                variant="primary"
+                                className="flex items-center justify-center"
+                            >
+                                <span className="mr-2">💡</span>
+                                See AI Ideas for Your Style
+                            </Button>
+
+                            <div className="flex justify-center space-x-3">
+                                <Button onClick={reset} variant="secondary" className="flex items-center flex-1 justify-center">
+                                    <span className="mr-2"><IconRefresh className="w-4 h-4"/></span>
+                                    Start Over
+                                </Button>
+                                <Button onClick={() => window.print()} variant="primary" className="flex-1">
+                                    Print / Save PDF
+                                </Button>
+                            </div>
+                        </div>
+                    </Card>
+                );
+            }
+
+            return null;
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
