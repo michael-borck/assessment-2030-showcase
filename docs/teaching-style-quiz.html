@@ -272,6 +272,13 @@ a:hover { color: #1e3a5f; }
             const [selections, setSelections] = React.useState([]); // Array of selected option indices
             const [result, setResult] = React.useState(null);
 
+            // Store result in localStorage when it changes and mode is RESULT
+            React.useEffect(() => {
+                if (mode === 'RESULT' && result) {
+                    localStorage.setItem('teachingStyle', result);
+                }
+            }, [mode, result]);
+
             const handleStartQuiz = () => {
                 setMode('QUIZ');
                 setCurrentStep(0);
@@ -435,11 +442,6 @@ a:hover { color: #1e3a5f; }
 
             // --- VIEW: RESULT ---
             if (mode === 'RESULT') {
-                // Store result in localStorage for other pages to access
-                React.useEffect(() => {
-                    localStorage.setItem('teachingStyle', result);
-                }, [result]);
-
                 return (
                     <Card className="text-center py-10 relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-purple-500"></div>
