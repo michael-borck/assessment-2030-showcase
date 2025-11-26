@@ -800,15 +800,24 @@
             const urlParams = new URLSearchParams(window.location.search);
             const styleFromUrl = urlParams.get('style');
 
+            console.log('DEBUG: URL params:', window.location.search);
+            console.log('DEBUG: styleFromUrl:', styleFromUrl);
+            console.log('DEBUG: Available styles:', Object.keys(teachingStyleRecommendations));
+
             if (styleFromUrl && teachingStyleRecommendations[styleFromUrl]) {
+                console.log('DEBUG: Using URL style:', styleFromUrl);
                 return styleFromUrl;
             }
 
             const styleFromStorage = localStorage.getItem('teachingStyle');
+            console.log('DEBUG: styleFromStorage:', styleFromStorage);
+
             if (styleFromStorage && teachingStyleRecommendations[styleFromStorage]) {
+                console.log('DEBUG: Using localStorage style:', styleFromStorage);
                 return styleFromStorage;
             }
 
+            console.log('DEBUG: No valid style found');
             return null;
         }
 
