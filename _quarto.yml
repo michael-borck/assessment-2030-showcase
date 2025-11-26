@@ -14,3 +14,4 @@ format:
     toc: true
     toc-depth: 2
     include-before-body: _extensions/navbar.html
+    include-after-body: _extensions/footer.html

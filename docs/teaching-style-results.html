@@ -335,7 +335,27 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+.site-footer {
+    background: white;
+    padding: 40px;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 3px solid #2c5aa0;
+}
+.site-footer p {
+    margin: 10px 0;
+}
+.site-footer a {
+    color: #2c5aa0;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    color: #1e3a5f;
+    text-decoration: underline;
+}
+
+</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -916,5 +936,12 @@
         // Initialize on page load
         window.addEventListener('DOMContentLoaded', renderResults);
     </script>
+
+<div class="site-footer">
+    <p><strong>Questions or Feedback?</strong></p>
+    <p>Dr. Michael Borck | Lecturer, Business Information Systems | Curtin University</p>
+    <p><a href="mailto:michael.borck@curtin.edu.au">michael.borck@curtin.edu.au</a></p>
+</div>
+
 </body>
 </html>
