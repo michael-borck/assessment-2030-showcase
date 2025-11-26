@@ -1,33 +1,16 @@
 project:
-  type: website
-  output-dir: docs
-  render:
-    - "content/*.qmd"
-  post-render:
-    - restore-index.sh
+  type: default
+  output-dir: docs/content
 
-website:
-  title: "Assessment 2030: Teaching with AI"
-  site-url: "https://michaelborck-presentations.github.io/assessment-2030/"
-  navbar:
-    left:
-      - text: Home
-        href: ../index.html
-      - text: Teaching Style
-        href: ../teaching-style-quiz.html
-      - text: AI Literacy
-        href: ../ai-literacy-diagnostic.html
-      - text: Resources
-        href: ../resources-hub.html
-      - text: Videos
-        href: ../videos.html
+render:
+  - "content/*.qmd"
 
 format:
   html:
     theme:
       light: cosmo
-    css: custom.css
+    css: ../custom.css
     embed-resources: true
     toc: true
     toc-depth: 2
-
+    include-before-body: _extensions/navbar.html
