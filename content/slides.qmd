@@ -7,8 +7,6 @@ date: "27 November 2025"
 format:
   html:
     embed-resources: true
-  pdf:
-    colorlinks: true
   pptx:
     slide-level: 1
     incremental: false

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Hub - Teaching with AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .section p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .resource-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .resource-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: all 0.2s;
+        }
+
+        .resource-item:hover {
+            background: #f0f5ff;
+            transform: translateX(4px);
+        }
+
+        .resource-item a {
+            color: #0369a1;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid #0284c7;
+            transition: all 0.2s;
+        }
+
+        .resource-item a:hover {
+            color: #0570c4;
+        }
+
+        .resource-type {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .resource-description {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <div class="header">
+            <h1>Resource Hub</h1>
+            <p>Explore all content by topic and learning objective</p>
+        </div>
+
+        <!-- Foundations -->
+        <div class="section">
+            <h2>📚 Foundational Understanding</h2>
+            <p>Start here if you're new to AI or want to build a solid conceptual foundation before diving into applications.</p>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <div class="resource-type">Foundation</div>
+                    <a href="content/what-is-ai.html">What is AI? A Non-Technical Introduction</a>
+                    <div class="resource-description">Core concepts about artificial intelligence, how it works, why it matters now, and what you actually need to know.</div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-type">Foundation</div>
+                    <a href="content/what-are-llms.html">What are LLMs?</a>
+                    <div class="resource-description">Understand large language models—what they are, how they work, and critically, their limitations and failure modes.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practical Skills -->
+        <div class="section">
+            <h2>🛠️ Practical Skills & Techniques</h2>
+            <p>Learn the specific techniques and frameworks for using AI effectively in teaching and learning.</p>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <div class="resource-type">How-To</div>
+                    <a href="content/craft-prompting-framework.html">C.R.A.F.T. Prompting Framework</a>
+                    <div class="resource-description">A structured approach to writing better AI prompts using Context, Role, Action, Format, and Tone principles.</div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-type">Practical</div>
+                    <a href="content/seven-techniques.html">Seven Essential Prompt Techniques</a>
+                    <div class="resource-description">Ready-to-use pedagogical techniques grounded in learning science that work across disciplines.</div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-type">How-To</div>
+                    <a href="content/managing-context-with-ai.html">Managing Context with AI</a>
+                    <div class="resource-description">Critical skill for complex projects—learn to structure multi-step AI interactions for coherent results.</div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-type">Practical</div>
+                    <a href="content/skills-based-summary.html">Skills-Based Summary</a>
+                    <div class="resource-description">Quick overview of all 7 core prompting skills with examples for each—your practical roadmap.</div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-type">How-To</div>
+                    <a href="content/critique-toolkit.html">Critique Toolkit</a>
+                    <div class="resource-description">Frameworks for evaluating and improving AI output—essential for quality control and critical thinking.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pedagogy & Theory -->
+        <div class="section">
+            <h2>🎓 Pedagogy & Learning Theory</h2>
+            <p>Understand the educational theory behind AI integration and how it changes teaching and learning.</p>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <div class="resource-type">Theory</div>
+                    <a href="content/ai-in-pedagogical-design-and-delivery.html">AI in Pedagogical Design and Delivery</a>
+                    <div class="resource-description">How AI transforms teaching roles and learning design while preserving human-centered education.</div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-type">Learning Science</div>
+                    <a href="content/cognitive-prompting-in-education.html">Cognitive Prompting in Education</a>
+                    <div class="resource-description">Grounded in learning science—how to use prompting to support deeper thinking and understanding.</div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-type">Theory</div>
+                    <a href="content/ai-to-help-you-use-ai.html">Using AI to Help You Use AI</a>
+                    <div class="resource-description">Meta-learning guide—discover your own AI path and use AI itself to deepen your AI literacy.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ethics & Integrity -->
+        <div class="section">
+            <h2>⚖️ Ethics, Integrity & Responsible Use</h2>
+            <p>Critical considerations for using AI responsibly in education.</p>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <div class="resource-type">Ethics</div>
+                    <a href="content/ethics-integrity.html">Ethics & Integrity in AI-Enhanced Teaching</a>
+                    <div class="resource-description">Framework for thinking through ethical implications, academic integrity, and responsible AI use in education.</div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-type">Critical Thinking</div>
+                    <a href="content/black-grey-swan.html">Black Swans, Grey Swans, and AI</a>
+                    <div class="resource-description">Understand predictability, uncertainty, and how to think critically about AI's potential and limitations.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research & References -->
+        <div class="section">
+            <h2>📖 Research & Further Reading</h2>
+            <p>Curated references and research for deeper learning.</p>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <div class="resource-type">References</div>
+                    <a href="content/references.html">References & Further Reading</a>
+                    <div class="resource-description">Curated list of research, articles, and resources on AI in education and learning science.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Videos -->
+        <div class="section">
+            <h2>📺 Video Resources</h2>
+            <p>External perspectives from experts on AI in education.</p>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <div class="resource-type">Video</div>
+                    <a href="videos.html">View Videos</a>
+                    <div class="resource-description">Curated video resources featuring expert perspectives on AI in education.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

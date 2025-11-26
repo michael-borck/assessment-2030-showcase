@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Teaching Style + AI Integration Ideas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Lexend', sans-serif;
+            font-size: 22px;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .style-description {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .alignment-intro {
+            background: #f0f5ff;
+            padding: 24px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .ai-ideas {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .ai-idea {
+            background: #fafbfc;
+            padding: 24px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .ai-idea:hover {
+            background: #f0f5ff;
+            transform: translateX(4px);
+        }
+
+        .ai-idea-title {
+            font-family: 'Lexend', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ai-idea-icon {
+            color: #667eea;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .ai-idea-detail {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .resources-section {
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .resource-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .resource-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 16px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.2s ease;
+        }
+
+        .resource-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+        }
+
+        .resource-icon {
+            flex-shrink: 0;
+            font-size: 20px;
+            color: #667eea;
+            margin-top: 2px;
+        }
+
+        .resource-content {
+            flex: 1;
+        }
+
+        .resource-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .resource-title a {
+            color: #0369a1;
+            text-decoration: none;
+            border-bottom: 2px solid #0284c7;
+            transition: all 0.2s;
+        }
+
+        .resource-title a:hover {
+            color: #0570c4;
+        }
+
+        .resource-type {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .resource-description {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .cta-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            padding: 16px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .cta-secondary:hover {
+            background: #f0f5ff;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e0e0e0;
+            margin: 40px 0;
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .breadcrumb {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+            border-bottom: 1px solid #667eea;
+        }
+
+        .breadcrumb a:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .content {
+                padding: 24px 20px;
+            }
+
+            .cta-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Your Teaching Style</h1>
+            <p>How AI can amplify your approach to teaching</p>
+        </div>
+
+        <div class="content">
+            <div class="breadcrumb">
+                <a href="index.html">← Back to Home</a> |
+                <a href="teaching-style-quiz.html">← Retake Quiz</a>
+            </div>
+
+            <div id="styleContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Teaching Style Recommendations Data
+        const teachingStyleRecommendations = {
+            'Traditional': {
+                description: "Focuses on direct instruction, explicit teaching, and structured content delivery.",
+                aiAlignmentTitle: "How AI Complements Traditional Teaching",
+                aiAlignment: "AI handles content generation, assembly, and initial presentation—freeing your expertise to focus on direct instruction, expert guidance, and ensuring students master core concepts.",
+                aiIdeas: [
+                    {
+                        icon: "📝",
+                        idea: "Generate draft lecture notes & slides",
+                        detail: "You curate, edit, and verify for accuracy before presenting to your class"
+                    },
+                    {
+                        icon: "📊",
+                        idea: "Create practice problems and quizzes",
+                        detail: "AI generates bulk content; you review and select the best items aligned to your standards"
+                    },
+                    {
+                        icon: "✓",
+                        idea: "Design assessment rubrics",
+                        detail: "AI drafts rubrics aligned to your learning standards; you finalize and customize"
+                    },
+                    {
+                        icon: "🔍",
+                        idea: "Diagnose student misconceptions",
+                        detail: "AI analyzes student explanations to identify common errors you can address in instruction"
+                    }
+                ],
+                resources: [
+                    {
+                        title: "What is AI? A Non-Technical Introduction",
+                        link: "../content/what-is-ai.html",
+                        type: "Foundation",
+                        description: "Essential concepts you need to understand before using AI in your teaching"
+                    },
+                    {
+                        title: "C.R.A.F.T. Prompting Framework",
+                        link: "../content/craft-prompting-framework.html",
+                        type: "How-To",
+                        description: "Learn the structured approach to writing clear, specific prompts that get better results"
+                    },
+                    {
+                        title: "Skills-Based Summary",
+                        link: "../content/skills-based-summary.html",
+                        type: "Roadmap",
+                        description: "Quick overview of all 7 core skills—see where you want to focus"
+                    }
+                ]
+            },
+            'Constructivist': {
+                description: "Learners actively construct knowledge. Teacher as facilitator. Emphasizes discovery and context.",
+                aiAlignmentTitle: "How AI Amplifies Constructivist Learning",
+                aiAlignment: "AI helps you scaffold student discovery by generating tailored questions, creating problem scenarios, and providing adaptive feedback—without losing the human guidance that makes constructivism work.",
+                aiIdeas: [
+                    {
+                        icon: "❓",
+                        idea: "Generate thought-provoking questions",
+                        detail: "Use AI to create Socratic-style prompts that guide discovery without giving answers away"
+                    },
+                    {
+                        icon: "🎯",
+                        idea: "Create adaptive problem scenarios",
+                        detail: "Design problems where AI generates variations based on student choices and responses"
+                    },
+                    {
+                        icon: "💬",
+                        idea: "Provide scaffolded feedback",
+                        detail: "AI offers hints and guiding questions that push student thinking deeper without solving it"
+                    },
+                    {
+                        icon: "🤝",
+                        idea: "Generate peer discussion prompts",
+                        detail: "Create open-ended questions that spark genuine peer collaboration and sense-making"
+                    }
+                ],
+                resources: [
+                    {
+                        title: "Cognitive Prompting in Education",
+                        link: "../content/cognitive-prompting-in-education.html",
+                        type: "Foundation",
+                        description: "How to use prompting to support deeper thinking and construction of knowledge"
+                    },
+                    {
+                        title: "AI in Pedagogical Design and Delivery",
+                        link: "../content/ai-in-pedagogical-design-and-delivery.html",
+                        type: "Theory",
+                        description: "Understand how AI tools change pedagogical roles while preserving human-centered learning"
+                    },
+                    {
+                        title: "Seven Essential Prompt Techniques",
+                        link: "../content/seven-techniques.html",
+                        type: "Practical",
+                        description: "Ready-to-use techniques grounded in learning science for your classroom"
+                    }
+                ]
+            },
+            'Socratic Method': {
+                description: "Based on disciplined dialogue. Teacher uses probing questions to challenge assumptions and uncover complex ideas.",
+                aiAlignmentTitle: "AI as Your Questioning Partner",
+                aiAlignment: "AI excels at generating nuanced, probing questions and playing the role of 'devil's advocate.' Use it to prepare questions, model responses, and deepen student thinking.",
+                aiIdeas: [
+                    {
+                        icon: "📚",
+                        idea: "Generate discussion questions in advance",
+                        detail: "Prepare comprehensive question sets that guide specific inquiry paths you want to explore"
+                    },
+                    {
+                        icon: "💡",
+                        idea: "Model the Socratic dialogue",
+                        detail: "Have students see how AI responds to their thinking; they learn from quality questioning"
+                    },
+                    {
+                        icon: "⚔️",
+                        idea: "Play 'intellectual opponent'",
+                        detail: "Students pose ideas; AI offers counterarguments they must refute—great practice for rigorous thinking"
+                    },
+                    {
+                        icon: "🧠",
+                        idea: "Analyze reasoning patterns",
+                        detail: "AI identifies logical fallacies in student arguments for you to explore together"
+                    }
+                ],
+                resources: [
+                    {
+                        title: "C.R.A.F.T. Prompting Framework",
+                        link: "../content/craft-prompting-framework.html",
+                        type: "How-To",
+                        description: "Master structured prompting to generate more nuanced, challenging questions"
+                    },
+                    {
+                        title: "Critique Toolkit",
+                        link: "../content/critique-toolkit.html",
+                        type: "Practice",
+                        description: "Learn frameworks for evaluating and critiquing ideas—sharpen your Socratic edge"
+                    },
+                    {
+                        title: "Cognitive Prompting in Education",
+                        link: "../content/cognitive-prompting-in-education.html",
+                        type: "Theory",
+                        description: "Understand the science behind questioning and how to use AI to enhance it"
+                    }
+                ]
+            },
+            'Project-Based Learning': {
+                description: "Learning through engaging with complex, real-world problems over an extended period. Student-driven.",
+                aiAlignmentTitle: "AI as Your Project Management & Research Assistant",
+                aiAlignment: "AI helps with research synthesis, scenario generation, and stakeholder simulation—letting you focus on coaching and facilitating student decision-making.",
+                aiIdeas: [
+                    {
+                        icon: "🌍",
+                        idea: "Generate realistic project scenarios",
+                        detail: "Create complex problems grounded in real constraints and actual stakeholder interests"
+                    },
+                    {
+                        icon: "👥",
+                        idea: "Simulate stakeholder perspectives",
+                        detail: "AI role-plays different stakeholders (clients, regulators, users) students must navigate"
+                    },
+                    {
+                        icon: "📖",
+                        idea: "Synthesize research & background info",
+                        detail: "Students gather info; AI organizes and contextualizes it for deeper analysis"
+                    },
+                    {
+                        icon: "📋",
+                        idea: "Generate feedback on proposals",
+                        detail: "AI provides substantive critique on student project plans and recommendations"
+                    }
+                ],
+                resources: [
+                    {
+                        title: "Managing Context with AI",
+                        link: "../content/managing-context-with-ai.html",
+                        type: "How-To",
+                        description: "Essential for complex projects—learn to structure multi-step AI interactions"
+                    },
+                    {
+                        title: "Seven Essential Prompt Techniques",
+                        link: "../content/seven-techniques.html",
+                        type: "Practical",
+                        description: "Practical examples tailored to complex, real-world problem scenarios"
+                    },
+                    {
+                        title: "AI in Pedagogical Design and Delivery",
+                        link: "../content/ai-in-pedagogical-design-and-delivery.html",
+                        type: "Theory",
+                        description: "Understand the pedagogy of AI-enhanced project-based learning"
+                    }
+                ]
+            },
+            'Inquiry-Based Learning': {
+                description: "Starts with a question or problem. Students lead their own investigation to find answers.",
+                aiAlignmentTitle: "AI as Your Research & Question-Generation Partner",
+                aiAlignment: "AI helps students explore questions, synthesize findings, and identify gaps in their thinking—amplifying their investigative power without directing the inquiry.",
+                aiIdeas: [
+                    {
+                        icon: "❓",
+                        idea: "Generate investigative sub-questions",
+                        detail: "Help students break down their core question into researchable components"
+                    },
+                    {
+                        icon: "🔬",
+                        idea: "Provide background context quickly",
+                        detail: "Students focus on investigation; AI gives them essential context to get started"
+                    },
+                    {
+                        icon: "🎯",
+                        idea: "Identify gaps in their thinking",
+                        detail: "AI asks probing questions about what they haven't considered yet"
+                    },
+                    {
+                        icon: "🔗",
+                        idea: "Synthesize findings across sources",
+                        detail: "Students find sources; AI helps organize patterns and contradictions for analysis"
+                    }
+                ],
+                resources: [
+                    {
+                        title: "Cognitive Prompting in Education",
+                        link: "../content/cognitive-prompting-in-education.html",
+                        type: "Theory",
+                        description: "Grounded in learning science—how to prompt productive inquiry"
+                    },
+                    {
+                        title: "Managing Context with AI",
+                        link: "../content/managing-context-with-ai.html",
+                        type: "How-To",
+                        description: "Critical skill for managing multi-step investigations with AI"
+                    },
+                    {
+                        title: "Seven Essential Prompt Techniques",
+                        link: "../content/seven-techniques.html",
+                        type: "Practical",
+                        description: "Ready-to-use techniques for guiding student inquiry"
+                    }
+                ]
+            },
+            'Experiential Learning': {
+                description: "Learning through doing and reflection. Involves hands-on experiences and activities.",
+                aiAlignmentTitle: "AI as Your Reflection & Analysis Coach",
+                aiAlignment: "AI helps students extract learning from experience through guided reflection and comparative analysis of their experiences and approaches.",
+                aiIdeas: [
+                    {
+                        icon: "🤔",
+                        idea: "Generate reflection prompts after activities",
+                        detail: "Guide students to extract deeper learning from what they just experienced"
+                    },
+                    {
+                        icon: "⚖️",
+                        idea: "Compare approaches & outcomes",
+                        detail: "AI analyzes different student approaches to the same task; highlight patterns"
+                    },
+                    {
+                        icon: "🔄",
+                        idea: "Create variation challenges",
+                        detail: "Generate 'what-if' scenarios where students apply their experience differently"
+                    },
+                    {
+                        icon: "📈",
+                        idea: "Provide patterns & principles",
+                        detail: "Help students move from experience to generalized insights they can transfer"
+                    }
+                ],
+                resources: [
+                    {
+                        title: "Seven Essential Prompt Techniques",
+                        link: "../content/seven-techniques.html",
+                        type: "Practical",
+                        description: "Practical examples grounded in experiential learning theory"
+                    },
+                    {
+                        title: "AI in Pedagogical Design and Delivery",
+                        link: "../content/ai-in-pedagogical-design-and-delivery.html",
+                        type: "Theory",
+                        description: "Understand how AI supports reflection and learning from experience"
+                    },
+                    {
+                        title: "Cognitive Prompting in Education",
+                        link: "../content/cognitive-prompting-in-education.html",
+                        type: "Learning Science",
+                        description: "How to use prompts to deepen reflection and extract meaning"
+                    }
+                ]
+            },
+            'Collaborative Learning': {
+                description: "Students work in groups to solve problems, complete tasks, or create products. Emphasizes social interaction.",
+                aiAlignmentTitle: "AI as Your Group Facilitator & Debate Partner",
+                aiAlignment: "AI can generate discussion points, play devil's advocate, and help groups synthesize ideas—enhancing collaboration without replacing peer interaction.",
+                aiIdeas: [
+                    {
+                        icon: "💬",
+                        idea: "Generate discussion prompts for groups",
+                        detail: "Create provocative questions that spark genuine group debate and collaboration"
+                    },
+                    {
+                        icon: "🤨",
+                        idea: "Play the skeptical group member",
+                        detail: "AI challenges group consensus, forcing deeper justification and critical thinking"
+                    },
+                    {
+                        icon: "🔍",
+                        idea: "Synthesize group thinking",
+                        detail: "Help teams extract their collective insights and organize ideas into coherent products"
+                    },
+                    {
+                        icon: "🌈",
+                        idea: "Generate alternative approaches",
+                        detail: "When a group converges too quickly, AI offers options to explore"
+                    }
+                ],
+                resources: [
+                    {
+                        title: "Seven Essential Prompt Techniques",
+                        link: "../content/seven-techniques.html",
+                        type: "Practical",
+                        description: "Practical examples for facilitating group work with AI"
+                    },
+                    {
+                        title: "C.R.A.F.T. Prompting Framework",
+                        link: "../content/craft-prompting-framework.html",
+                        type: "How-To",
+                        description: "Master prompting to generate better discussion and synthesis"
+                    },
+                    {
+                        title: "AI in Pedagogical Design and Delivery",
+                        link: "../content/ai-in-pedagogical-design-and-delivery.html",
+                        type: "Theory",
+                        description: "How AI changes collaborative learning dynamics"
+                    }
+                ]
+            },
+            'Differentiated Instruction': {
+                description: "Tailoring instruction to meet individual student needs. Flexible grouping and varied assignments.",
+                aiAlignmentTitle: "AI as Your Personalization Engine",
+                aiAlignment: "AI generates varied explanations, examples, and assignments tailored to different learning profiles—making differentiation scalable and sustainable.",
+                aiIdeas: [
+                    {
+                        icon: "📚",
+                        idea: "Generate multiple explanations of concepts",
+                        detail: "Create alternative ways to explain the same idea for different learning styles"
+                    },
+                    {
+                        icon: "✏️",
+                        idea: "Create personalized practice sets",
+                        detail: "AI generates targeted exercises for students who need extra practice or extension"
+                    },
+                    {
+                        icon: "🎚️",
+                        idea: "Adjust complexity dynamically",
+                        detail: "Create assignments at multiple difficulty levels for the same content"
+                    },
+                    {
+                        icon: "📝",
+                        idea: "Provide individualized feedback",
+                        detail: "AI offers targeted suggestions based on each student's specific misconceptions"
+                    }
+                ],
+                resources: [
+                    {
+                        title: "AI in Pedagogical Design and Delivery",
+                        link: "../content/ai-in-pedagogical-design-and-delivery.html",
+                        type: "Theory",
+                        description: "Understand how AI supports personalized learning at scale"
+                    },
+                    {
+                        title: "Skills-Based Summary",
+                        link: "../content/skills-based-summary.html",
+                        type: "Practical",
+                        description: "Quick overview—see which skills matter most for differentiation"
+                    },
+                    {
+                        title: "Seven Essential Prompt Techniques",
+                        link: "../content/seven-techniques.html",
+                        type: "Practical",
+                        description: "Techniques for generating differentiated content"
+                    }
+                ]
+            },
+            'Montessori': {
+                description: "Student-centered approach with emphasis on self-directed activity, hands-on learning, and collaborative play.",
+                aiAlignmentTitle: "AI as Your Self-Paced Learning Scaffolder",
+                aiAlignment: "AI provides on-demand guidance, generates exploration prompts, and creates responsive materials—supporting self-directed learning without over-directing.",
+                aiIdeas: [
+                    {
+                        icon: "🔭",
+                        idea: "Generate exploration prompts",
+                        detail: "Create open-ended 'wonder questions' that invite self-directed investigation"
+                    },
+                    {
+                        icon: "🎨",
+                        idea: "Create responsive learning materials",
+                        detail: "AI generates variations on materials based on each student's current level and interests"
+                    },
+                    {
+                        icon: "🆘",
+                        idea: "Provide on-demand guidance",
+                        detail: "Students access AI coaching when they choose, at their own pace"
+                    },
+                    {
+                        icon: "🔗",
+                        idea: "Connect activities to discovery",
+                        detail: "Help students recognize patterns across independent activities they've completed"
+                    }
+                ],
+                resources: [
+                    {
+                        title: "AI in Pedagogical Design and Delivery",
+                        link: "../content/ai-in-pedagogical-design-and-delivery.html",
+                        type: "Theory",
+                        description: "How AI supports student-centered, self-directed learning"
+                    },
+                    {
+                        title: "Seven Essential Prompt Techniques",
+                        link: "../content/seven-techniques.html",
+                        type: "Practical",
+                        description: "Techniques for open-ended exploration and discovery"
+                    },
+                    {
+                        title: "Cognitive Prompting in Education",
+                        link: "../content/cognitive-prompting-in-education.html",
+                        type: "Learning Science",
+                        description: "How prompting supports self-directed learning"
+                    }
+                ]
+            }
+        };
+
+        // Get style from URL parameter or localStorage
+        function getTeachingStyle() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const styleFromUrl = urlParams.get('style');
+
+            if (styleFromUrl && teachingStyleRecommendations[styleFromUrl]) {
+                return styleFromUrl;
+            }
+
+            const styleFromStorage = localStorage.getItem('teachingStyle');
+            if (styleFromStorage && teachingStyleRecommendations[styleFromStorage]) {
+                return styleFromStorage;
+            }
+
+            return null;
+        }
+
+        // Render the results page
+        function renderResults() {
+            const style = getTeachingStyle();
+            const contentDiv = document.getElementById('styleContent');
+
+            if (!style) {
+                contentDiv.innerHTML = `
+                    <div class="error-message">
+                        <p>We couldn't find your teaching style. <a href="teaching-style-quiz.html">Please take the quiz first</a> to discover your style.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const rec = teachingStyleRecommendations[style];
+
+            let html = `
+                <div class="section">
+                    <h2 class="section-title">${style}</h2>
+                    <div class="style-description">${rec.description}</div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">${rec.aiAlignmentTitle}</h2>
+                    <div class="alignment-intro">${rec.aiAlignment}</div>
+
+                    <div class="ai-ideas">
+            `;
+
+            rec.aiIdeas.forEach(idea => {
+                html += `
+                    <div class="ai-idea">
+                        <div class="ai-idea-title">
+                            <span class="ai-idea-icon">${idea.icon}</span>
+                            ${idea.idea}
+                        </div>
+                        <div class="ai-idea-detail">${idea.detail}</div>
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Recommended Resources</h2>
+                    <p style="color: #666; font-size: 15px; margin-bottom: 20px;">These resources will help you understand the theory and practice for your teaching style.</p>
+                    <div class="resources-section">
+                        <div class="resource-list">
+            `;
+
+            rec.resources.forEach(resource => {
+                html += `
+                    <div class="resource-item">
+                        <div class="resource-icon">📄</div>
+                        <div class="resource-content">
+                            <div class="resource-type">${resource.type}</div>
+                            <div class="resource-title">
+                                <a href="${resource.link}" target="_blank">${resource.title}</a>
+                            </div>
+                            <div class="resource-description">${resource.description}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="section">
+                    <h2 class="section-title">Next Steps</h2>
+                    <p style="color: #666; font-size: 15px; margin-bottom: 20px;">Ready to go deeper? Take the AI Literacy assessment to see where you stand and get personalized learning recommendations.</p>
+
+                    <div class="cta-section">
+                        <a href="ai-literacy-diagnostic.html" class="cta-button cta-primary">
+                            ✨ Assess Your AI Literacy
+                        </a>
+                        <a href="index.html" class="cta-button cta-secondary">
+                            ← Back to Home
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            contentDiv.innerHTML = html;
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', renderResults);
+    </script>
+</body>
+</html>
