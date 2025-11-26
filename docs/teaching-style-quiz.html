@@ -41,24 +41,15 @@
         }
       }
     </script>
-</head>
-<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col items-center justify-center p-4">
-<!-- Professional Site Navigation -->
-<nav class="site-nav">
-    <div class="nav-container">
-        <a href="index.html" class="nav-brand">Assessment 2030: Teaching with AI</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="teaching-style-quiz.html">Teaching Style</a>
-            <a href="ai-literacy-diagnostic.html">AI Literacy</a>
-            <a href="resources-hub.html">Resources</a>
-            <a href="videos.html">Videos</a>
-        </div>
-    </div>
-</nav>
-
 <style>
-/* Site Navigation - Professional Blue Theme */
+/* Master Styles - Professional Navy Theme */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f7fa;
+}
 .site-nav {
     background: #1e3a5f;
     border-bottom: 3px solid #2c5aa0;
@@ -81,131 +72,61 @@
     font-size: 1.3em;
     font-weight: 600;
     text-decoration: none;
-    white-space: nowrap;
 }
-.nav-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+.nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
 .nav-links a {
     color: rgba(255,255,255,0.95);
     text-decoration: none;
     font-weight: 500;
     padding: 8px 16px;
     border-radius: 4px;
-    transition: all 0.2s ease;
-    white-space: nowrap;
+    transition: all 0.2s;
 }
-.nav-links a:hover {
-    background: rgba(255,255,255,0.15);
+.nav-links a:hover { background: rgba(255,255,255,0.15); color: white; }
+.container { max-width: 1200px; margin: 40px auto; padding: 0 30px; }
+h1, h2, h3 { color: #1e3a5f; margin-bottom: 1rem; }
+a { color: #2c5aa0; }
+a:hover { color: #1e3a5f; }
+.btn {
+    display: inline-block;
+    background: #2c5aa0;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.btn:hover {
+    background: #1e3a5f;
+    transform: translateY(-2px);
     color: white;
 }
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-    .nav-brand {
-        font-size: 1.1em;
-    }
-    .nav-links {
-        gap: 12px;
-        justify-content: center;
-    }
-    .nav-links a {
-        font-size: 0.9em;
-        padding: 6px 12px;
-    }
+    .nav-container { flex-direction: column; gap: 15px; }
+    .nav-links { gap: 12px; justify-content: center; }
+    .container { padding: 0 20px; }
 }
 </style>
-
-
-
-<style>
-.site-navbar {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 15px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.site-navbar-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.site-navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-.site-navbar a:hover {
-  background: rgba(255,255,255,0.2);
-}
-.site-navbar .logo {
-  font-size: 1.2em;
-  font-weight: 600;
-}
-.site-navbar-links {
-  display: flex;
-  gap: 20px;
-}
-@media (max-width: 600px) {
-  .site-navbar-links {
-    gap: 10px;
-    font-size: 0.9em;
-  }
-}
-</style>
-
-<div class="site-navbar">
-  <div class="site-navbar-content">
-    <a href="index.html" class="logo">Teaching with AI</a>
-    <div class="site-navbar-links">
-      <a href="index.html">Home</a>
-      <a href="teaching-style-quiz.html">Teaching Style</a>
-      <a href="ai-literacy-diagnostic.html">AI Literacy</a>
-      <a href="resources-hub.html">Resources</a>
-      <a href="videos.html">Videos</a>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col items-center justify-center p-4">
+<nav class="site-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-brand">Assessment 2030: Teaching with AI</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="teaching-style-quiz.html">Teaching Style</a>
+            <a href="ai-literacy-diagnostic.html">AI Literacy</a>
+            <a href="resources-hub.html">Resources</a>
+            <a href="videos.html">Videos</a>
+        </div>
     </div>
-  </div>
+</nav>
+
 </div>
 
 
-<header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Teaching with AI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="teaching-style-quiz.html">Teaching Style</a></li>
-            <li class="nav-item"><a class="nav-link" href="ai-literacy-diagnostic.html">AI Literacy</a></li>
-            <li class="nav-item"><a class="nav-link" href="resources-hub.html">Resources</a></li>
-            <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-</header>
-<style>
-  body { padding-top: 60px; }
-</style>
-
-
-    <div id="root" class="w-full max-w-3xl"></div>
+<div id="root" class="w-full max-w-3xl"></div>
 
     <script type="text/babel">
         // --- DATA & CONSTANTS ---
