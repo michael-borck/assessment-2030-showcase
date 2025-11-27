@@ -20,6 +20,7 @@ In AI, these are "unknown unknowns." They represent scenarios that are not in ou
     * **Retrospective Predictability:** Explanations are concocted after the fact.
 
 **Examples in AI Context:**
+
 * **Emergent Capabilities:** An AI model suddenly developing a capability it was never trained for and that developers did not believe was possible (e.g., a language model suddenly solving unsolved mathematical theorems without specific training).
 * **The "Flash Crash" Scenario:** Interconnected AI trading bots simultaneously hallucinating a market trend that doesn't exist, crashing the global economy in seconds before humans can pull the plug.
 * **Zero-Day Exploits:** A novel AI-generated cyberattack that bypasses all known security protocols because it utilizes a logic path no human coder ever considered.
@@ -37,6 +38,7 @@ In AI, these are "known unknowns." We know the risk exists, and we might even ha
     * **Impact:** Significant, often cascading through systems.
 
 **Examples in AI Context:**
+
 * **Infrastructure Collapse:** A geopolitical conflict (e.g., in Taiwan) cutting off the supply of advanced GPUs (Nvidia chips), causing a sudden, long-term freeze in global AI development. We know this is a supply chain bottleneck, but the industry operates as if it won't happen.
 * **Legal/Copyright Shutdown:** A supreme court ruling that declares all training on copyrighted data illegal, forcing major foundation models (like GPT-4 or Claude) to be deleted or retrained from scratch. This is a known legal risk that companies are currently "betting" against.
 * **Data Poisoning:** A coordinated attack where bad actors slowly feed "poisoned" data into open-source datasets over years, leading to a sudden, widespread failure of models that rely on that data.
